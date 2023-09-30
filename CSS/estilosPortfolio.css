@@ -1,0 +1,969 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/*Variables*/
+
+
+
+.tituloSection{
+	font-size: 3rem;
+	text-align: center;
+	margin: 30px 0px;
+	margin-bottom: 4%;
+	color: WHITE;
+	font-family: 'Titulo';
+
+}
+
+
+.texto{
+  font-family: 'Cuerpo';
+  margin: 20px 0 0 0;
+  padding: 0;
+  font-weight: 400;
+  color: white;
+  font-size: 1.2rem;;
+  line-height: 24px;
+  position: relatie;
+  line-height: 1.2;
+}
+
+.subtitulo{
+  font-size: 2rem;
+  font-family: 'Subtitulo';
+  margin-right: 5%;
+}
+
+.subtituloTexto{
+  color: #5B79D0 ; 
+  font-size: 1.2rem;
+  background-color: black;
+  font-family: 'Subtitulo';
+}
+
+
+@font-face {
+  font-family: 'Titulo'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Romance.ttf');
+}
+@font-face {
+  font-family: 'Subtitulo'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Cuerpo'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Menu'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Montserrat-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: 'Titulo'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Oswald.ttf');
+}
+
+body{
+	font-family: lato, Arial, sans-serif;
+	background-color: black;
+}
+
+
+header{
+    position: fixed;
+    /* max-width: 2281px; */
+    height: auto;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    /* margin: 0px auto; */
+    padding-top: 30px;
+    top: 0;
+    /* left: 17%; */
+    border-radius: 4px;
+    font-size: 1.3rem;
+    margin-bottom: 7%;
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    z-index: 99;
+
+}
+
+
+.clearfix {
+  width: 100%;
+  height: 1px;
+  background-color: #C850C0; /* Color verde neón */
+  opacity: 0.4;
+  position: relative;
+  clear: both;
+  margin-top: 3px;
+}
+
+
+.clearfix::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* Desplazamiento hacia arriba para el efecto neón */
+  left: -5px; /* Desplazamiento hacia la izquierda para el efecto neón */
+  right: -5px; /* Desplazamiento hacia la derecha para el efecto neón */
+  bottom: -5px; /* Desplazamiento hacia abajo para el efecto neón */
+  background-color: #C850C0; /* Color verde neón */
+  opacity: 0.9; /* Opacidad del efecto neón */
+  filter: blur(6px); /* Desenfoque para el efecto neón */
+  z-index: -1; /* Coloca el efecto neón detrás de la línea */
+  border-radius: 20px;
+}
+
+
+.logo{
+  width: 40%;
+  height: auto;
+  padding: 0 25px;
+  display: none;
+}
+
+.logo1{
+  width: 40%;
+  height: auto;
+  padding: 0 25px;
+  display: block;
+}
+
+nav{
+
+  margin:0 auto;
+  margin-bottom: 2%;
+}
+
+nav ul{
+
+  display: flex;
+  right: 0pxx;
+}
+
+nav ul li{
+  list-style: none;
+}
+
+nav ul li a{
+
+  display: block;
+  margin: 10px 0px;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Cuerpo';
+  font-size: 1rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active{  /*Ponemos asi el .activa con la "," arriba en el hover por que va junto, la class activa la llamaremos en el JavaScript*/
+
+  color: white;
+  transition: 0.2s;
+  border-radius: 30px;
+  border: 1px solid #C850C0;
+  background: linear-gradient(45deg, #C850C0, #5B79D0);
+
+}
+
+
+/*AQUI EMPIEZA LA SECCIÓN DE PORTFOLIO___________________*/
+
+.proyectos {
+ width: 100%;
+  max-width: 1200px;
+  margin: 17% auto 0; /* Esto establecerá un margen superior del 50% y centrará horizontalmente */
+  padding: 2px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px rgba(200, 80, 192, 0.5);
+  text-align: center;
+  transform: translateY(-50%);
+}     
+
+.proyectos h1 {
+
+  font-size: 5rem;
+  font-family: 'Titulo';
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: black;
+  padding: 5px;
+  background: linear-gradient(45deg, #FFCC70, #C850C0, #5B79D0);
+  -webkit-background-clip: text; /* Para navegadores webkit */
+  background-clip: text;
+  color: transparent; 
+
+
+}
+
+
+.button-row {
+  display: flex;
+  width: 63%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-top: 10%;
+}
+
+.button {
+  flex-grow: 1;
+  height: auto;
+  font-size: 1rem;
+  background-color: black; 
+  border: 1px solid  #C850C0;
+  font-family: 'Subtitulo';
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  position: relative;
+  clear: both;
+  border-radius: 30px;
+} 
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: -5px; 
+  left: -5px; 
+  right: -5px; 
+  bottom: -5px; 
+  background-color: #C850C0;
+  opacity: 0.9; 
+  filter: blur(2px); 
+  z-index: -1; 
+  border-radius: 30px;  
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: -5px; 
+  left: -5px; 
+  right: -5px; 
+  bottom: -5px;
+  background-color: black; 
+  opacity: 0.9; 
+  filter: blur(6px); 
+  z-index: -1; 
+  border-radius: 0px;
+}
+
+
+.button:hover,
+.button.active{
+	background-color: #C850C0;
+	color: black;
+	font-weight: bold;
+	transition: 0.2s;
+  box-shadow: 0px 4px 0px rgba(200, 80, 192, 0.8);
+}
+
+
+.grid-container{
+  display: grid;
+  overflow: hidden;
+  margin-top: 70px;
+
+}
+
+.grid-item{
+	width: 60%;
+	height: auto;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  background-color: #191919;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+
+.columna {
+	flex: 1;
+  padding: 10px;
+  position: relative;
+  background: linear-gradient(to left, #FFCC70, #C850C0, #4158D0);
+  -webkit-background-clip: text; /* Para navegadores webkit */
+  background-clip: text;
+  color: transparent; /* Hacemos el texto transparente */
+}
+
+.columna h1 {
+    font-family: 'Subtitulo';
+}
+
+.columna p{
+	color: white;
+  line-height: 1.3; 
+}
+
+.columna1 img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background-color: black;
+  border-radius: 20px;
+/*  padding: 20px;*/
+
+}
+
+.grid-item  .columna1{
+ border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+/* background: linear-gradient(to left, #FFCC70, #C850C0, #4158D0);*/
+/* background-clip: padding-box;*/
+/* padding: 3px; */
+ box-sizing: border-box;
+ border-radius: 20px;
+}
+
+.grid-item  .columna2 {
+position: relative;
+background-color: black;
+width: 100%;
+flex-wrap: no-wrap;
+display: wrap;
+
+}
+
+button a{
+	text-decoration: none;
+  color: white; 
+}
+
+.boton1 {
+  position: absolute;
+  margin: 15px 0px;
+  left: 0;
+  padding: 10px 40px;
+  color: white;
+  font-family: 'Cuerpo';
+  font-size: 1rem;
+  transition: 0.2s;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #C850C0, #5B79D0);
+
+}
+
+.boton1:hover{
+  color: black;
+}
+
+.boton2:hover{
+  color: black;
+}
+
+
+.boton2 {
+  position: absolute;
+  margin: 15px 15px;
+  right: 0;
+  padding: 10px 40px;
+  color: white;
+  font-family: 'Cuerpo';
+  font-size: 1rem;
+  transition: 0.2s;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #C850C0, #5B79D0);
+
+}
+
+/*button{
+   all: unset; 
+}*/
+
+
+
+/* Estilos CSS para el footer */
+footer {
+    background-color: #191919;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+/* Estilo para el eslogan */
+.slogan {
+    font-size: 1.5rem;
+    font-family: 'Subtitulo';
+    margin-bottom: 10px;
+}
+
+
+.botonFooter{
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 30px;
+    border: 1px solid #C850C0;
+    background: linear-gradient(45deg, #C850C0, #5B79D0);
+    font-size: 1rem;
+    padding: 10px 5px;
+    font-family: 'Cuerpo';
+    margin: 1%;
+    transition: background-color 0.3s ease; 
+}
+
+.botonFooter:hover {
+  color: black;
+} 
+
+/* Estilo para la imagen del logotipo */
+.logoFooter {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: auto;
+        margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+footer p{
+  font-size: 1.2rem;
+  margin: 1%;
+  font-family: 'Cuerpo';
+}
+
+footer i{
+  margin-right: 2%;
+}
+
+.divider {
+    border-top: 1px solid #fff;
+    margin: 20px auto; /* Margen superior e inferior para centrar la línea */
+    width: 50%; /* Ancho de la línea */
+}
+
+
+/*Responsive*/
+@media (max-width: 1750px){
+  .boton1, .boton2{
+    padding: 5px 15px;
+    margin: 19px 15px;
+    font-size: 0.9rem;
+  }
+
+  .texto{
+    font-size: 1rem;
+  }
+
+  .subtitulo{
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1600px){
+  .boton1, .boton2{
+    padding: 2px 10px;
+    margin: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .text p{
+    font-size: 0.9rem;
+  }
+
+  .subtitulo{
+    font-size: 1.3rem;
+  }
+}
+
+
+@media (max-width: 1500px){
+
+  .columna .texto{
+    font-size: 1rem;
+  }
+
+  .proyectos{
+  width: 90%;
+}
+
+}
+
+
+@media (max-width: 1430px){
+
+	#menu{
+		margin: 20px;
+	}
+
+  .proyectos{
+    margin-top: 26%;
+  }
+
+  /*	Section portfolio*/
+
+  .button{
+  	font-size: 0.8rem;
+  	color: white;
+  }
+
+    .columna .texto{
+    font-size: 0.9rem;
+  }
+
+}
+
+
+@media (max-width: 1300px){
+
+	#menu{
+		margin: 20px;
+	}
+
+  /*	Section portfolio*/
+.proyectos{
+  width: 80%;
+}
+
+.button{
+  font-size: 0.9rem;
+  color: white;
+}
+
+
+
+.columna .texto{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+}
+
+
+@media (max-width: 1250px) {
+
+  #menu{
+    margin: 20px;
+  }
+
+	.proyectos{
+  	width: 80%;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  .button {
+    font-size: 0.8rem;
+    color: white;
+  }
+
+  .texto{
+  	font-size: 1rem;
+  }
+
+  .boton1 .boton2{
+    margin: -30px 10px;
+    padding: 1px 5px;
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 1170px) {
+  header {
+    flex-direction: row; /* Cambia la dirección de flexión a fila */
+    justify-content: space-between; /* Alinea los elementos en ambos extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+
+  .logo {
+    width: 50%; /* Ajusta el ancho del logotipo automáticamente */
+    height: auto; /* Ajusta la altura del logotipo automáticamente */
+  }
+
+  nav {
+    float: right; /* Alinea el menú a la derecha */
+    margin-bottom: 0; /* Elimina el margen inferior del menú */
+  }
+
+  nav ul {
+    display: flex;
+    right: auto; /* Ajusta la posición a la derecha automáticamente */
+  }
+
+.clearfix{
+    margin-top: 2%;
+  }
+  .proyectos{
+  	width: 80%;
+  }
+
+  .grid-item{
+    width: 80%;
+  }
+
+  .button {
+    font-size: 0.8rem;
+    color: white;
+  }
+
+  .button-row{
+  	width: 80%;
+  }
+  .columna h1 {
+    font-size: 1.4rem;
+    margin: 0px 0px 20px 12px;
+  }
+
+  .columna p {
+    font-size: 0.9rem;
+    margin-bottom: 70px;
+  }
+
+
+  .columna1 img {
+    border-radius: 10px;
+  }
+
+  .columna1 {
+    border-radius: 10px;
+  }
+
+  .boton1 .boton2{
+    margin: -30px 10px;
+    padding: 1px 5px;
+    font-size: 8rem;
+  }
+
+}
+
+
+@media (max-width: 1100px) {
+    header {
+    flex-direction: row; /* Cambia la dirección de flexión a fila */
+    justify-content: space-between; /* Alinea los elementos en ambos extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+  .logo {
+    width: 50%; /* Ajusta el ancho del logotipo automáticamente */
+    height: auto; /* Ajusta la altura del logotipo automáticamente */
+  }
+
+  nav {
+    float: right; /* Alinea el menú a la derecha */
+    margin-bottom: 0; /* Elimina el margen inferior del menú */
+  }
+
+  nav ul {
+    display: flex;
+    right: auto; /* Ajusta la posición a la derecha automáticamente */
+  }
+
+   .proyectos{
+    margin-top: 35%;
+  }
+}
+
+@media (max-width:995px){
+
+	 header{
+
+  flex-direction: row; /* Cambia a dirección de fila para alinear horizontalmente */
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between; /* Espacio entre el logotipo y la barra de navegación */
+  height: auto; 
+  
+  }
+
+.clearfix{
+  margin-top: 25px;
+}
+
+#menu{
+    
+    width: 40px;
+    display: block;
+    margin: 10px;
+    float: right; /*Para que se ponga el menu hamburguesa a la derecha*/
+    text-align: center;
+    font-size: 30px;
+    color: #5B79D0;
+    cursor: pointer;
+  }
+
+  #menu:before{ /*Para que no se active el responsive tablet*/
+    
+    content: '\f0c9';/*Pegamos lo de FontAwesome*/
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
+
+  .logo{
+  width: 40%;
+  display: block;
+  }
+
+  .logo1{
+    display: none;
+  }
+
+  nav{
+
+    display: none; /*Escondemos el menu de pantalla*/
+  }
+
+  nav.active{
+
+    display: block; /*Para que se agrupen todas las listas que hay debajo de esa classe*/
+    width: 100%;
+  }
+
+  nav.active ul{
+
+    display: block; /*Vuelves a decirle que se ponga en bloque la ul*/
+  }
+
+  nav ul li a{
+   padding: 25px;
+  }
+
+  nav.active ul a{
+    margin: 0;
+
+  }
+/*	Section portfolio*/
+
+	
+  .button-row {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .columna1 .columna{
+  
+  flex: 1;
+  }
+
+  .columna2{
+    margin-bottom: 15%;
+  }
+
+  .button{
+    margin: 0 auto;
+    margin-bottom: 3%;
+    font-size: 1rem;
+    color: white;
+    width: 50%;
+  }
+
+  .grid-item{
+  	flex-direction: column;
+    padding: 0px;
+    height: auto;
+    padding: 35px;
+  }
+
+  .columna1>img{
+  	width: auto;
+    height: auto;
+  }
+
+  .boton{
+  	width: 100%;
+    position: static; /* Cambiar a posición estática para que esté debajo del texto */
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .columna h1{
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.columna p{
+		font-size: 1.3rem;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
+.boton1, .boton2 {
+  font-size: 1rem;
+  left: 0;
+  right: 0;
+  margin-bottom: 60px;
+
+}
+	.proyectos h1{
+		font-size: 3.4rem;
+	}
+
+  
+.footer-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.divider {
+  width: 80%;
+}
+
+
+}
+
+
+@media (max-width: 850px){
+  .logo1{
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 800px){
+  .logo1{
+    width: 100%;
+  }
+}
+
+@media (max-width: 770px){
+  .logo1{
+    width: 100%;
+  }
+
+    nav ul li a{
+    font-size: 0.9rem;
+  }
+ .proyectos{
+    margin-top: 40%;
+  }
+}
+
+@media (max-width: 530px){
+
+.logoFooter{
+      margin: 5% auto;
+  }
+
+  footer p{
+  font-size: 0.8rem;
+  margin-top: 6%;
+  font-family: 'Cuerpo';
+}
+
+.slogan {
+    font-size: 1.3rem;
+}
+
+}
+
+@media (max-width: 480px) {
+
+  .boton1, .boton2{
+    font-size: 0.7rem;
+  }
+
+	.button{
+		font-size: 0.6rem;
+    margin-bottom: 7%;
+	}
+  .tituloSection {
+    font-size: 2rem;
+  }
+
+
+  .proyectos h1 {
+    font-size: 2.5rem;
+  }
+
+  .columna h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .columna .texto {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .columna2{
+    margin-bottom: 2%;
+  }
+
+  .logo {
+    width: 80px; /* Ajusta el ancho del logo automáticamente */
+    padding: 0 5px;
+  }
+
+  header {
+    flex-direction: row; /* Restablece la dirección de flexión a fila */
+    justify-content: space-between; /* Alinea los elementos en ambos extremos */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+
+  #menu {
+    width: auto; /* Ajusta el ancho del menú hamburguesa automáticamente */
+    margin: 0; /* Elimina el margen del menú hamburguesa */
+  }
+
+  .grid-item{
+    padding: 20px;
+/*    height: 480px;*/
+  }
+
+  .columna1 img{
+    margin-top: 5%;
+  }
+ .proyectos{
+    margin-top: 45%;
+  }
+}
+
+@media (max-width: 390px){
+
+.proyectos h1{
+  font-size: 2.4rem;
+}
+}
+
+@media (max-width: 370px){
+
+  .logoFooter{
+      margin: 5% auto;
+  }
+
+  footer p{
+  font-size: 0.8rem;
+  margin-top: 6%;
+  font-family: 'Cuerpo';
+}
+
+.proyectos h1{
+  font-size: 2.3rem;
+}
+}
+
+
+@media (max-width:330px){
+   .proyectos{
+    margin-top: 60%;
+  }
+.proyectos h1{
+  font-size: 2rem;
+}
+}

@@ -1,0 +1,933 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/*Variables*/
+
+.tituloSection{
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 4%;
+  color: white;
+  font-family: 'Titulo';
+  text-align: center;
+  letter-spacing: 2px;
+  background-image: linear-gradient(45deg,#FFCC70,  #C850C0, #5B79D0) ; /* Define el degradado */
+  -webkit-background-clip: text; /* Para navegadores  webkit */
+  background-clip: text;
+  color: transparent; /* Hacemos el texto transparente */ 
+}
+
+
+.subtituloLogo{
+	font-size: 3rem;
+	color: white;
+	font-family: 'Subtitulo';
+	margin-left: 20%;
+	margin-top: 15%;
+
+}
+
+
+@font-face {
+  font-family: 'Titulo'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Oswald.ttf');
+}
+@font-face {
+  font-family: 'Subtitulo'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Cuerpo'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Menu'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Montserrat-Regular.ttf');
+}
+
+
+body{
+	font-family: lato, Arial, sans-serif;
+	 background-color: black;
+}
+
+
+
+header{
+    position: fixed;
+    /* max-width: 2281px; */
+    height: auto;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    /* margin: 0px auto; */
+    padding-top: 30px;
+    top: 0;
+    /* left: 17%; */
+    border-radius: 4px;
+    font-size: 1.3rem;
+    margin-bottom: 7%;
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    z-index: 99;
+
+}
+
+
+
+.clearfix {
+  width: 100%;
+  height: 1px;
+  background-color: #C850C0; /* Color verde neón */
+  opacity: 0.4;
+  position: relative;
+  clear: both;
+  margin-top: 3px;
+}
+
+
+.clearfix::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* Desplazamiento hacia arriba para el efecto neón */
+  left: -5px; /* Desplazamiento hacia la izquierda para el efecto neón */
+  right: -5px; /* Desplazamiento hacia la derecha para el efecto neón */
+  bottom: -5px; /* Desplazamiento hacia abajo para el efecto neón */
+  background-color: #C850C0; /* Color verde neón */
+  opacity: 0.9; /* Opacidad del efecto neón */
+  filter: blur(6px); /* Desenfoque para el efecto neón */
+  z-index: -1; /* Coloca el efecto neón detrás de la línea */
+  border-radius: 20px;
+}
+
+
+.logo{
+  width: 40%;
+  height: auto;
+  padding: 0 25px;
+  display: none;
+}
+
+.logo1{
+  width: 40%;
+  height: auto;
+  padding: 0 25px;
+  display: block;
+}
+
+nav{
+
+  margin:0 auto;
+  margin-bottom: 2%;
+}
+
+nav ul{
+
+  display: flex;
+  right: 0pxx;
+}
+
+nav ul li{
+  list-style: none;
+}
+
+nav ul li a{
+
+  display: block;
+  margin: 10px 0px;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Cuerpo';
+  font-size: 1rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active{  /*Ponemos asi el .activa con la "," arriba en el hover por que va junto, la class activa la llamaremos en el JavaScript*/
+
+  color: white;
+  transition: 0.2s;
+  border-radius: 30px;
+  border: 1px solid #C850C0;
+  background: linear-gradient(45deg, #C850C0, #5B79D0);
+
+}
+.imgPortada{
+  background-color: black;
+  width: 100%;
+
+}
+
+.imgPortada img{
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  display: flex;
+  overflow: hidden; 
+  object-fit: contain;
+  margin-top: 6%;
+}
+  
+/*
+.Cuerpo{
+	font-family: 'Cuerpo';
+	font-size: 1.3rem;
+	color: white;
+}*/
+
+.Subtitulo{
+	font-family: 'Subtitulo';
+	font-size: 2.8rem;
+	color: white;
+}
+
+
+
+.row{
+  display:flex;
+  flex-wrap:wrap;
+  margin:5px;
+  width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+
+.rowH{
+  display:flex;
+  flex-wrap:wrap;
+  margin:5px;
+  width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+
+
+.column{
+  flex:50%;
+  max-width:50%;
+  padding:10px;
+}
+
+.columnH{
+  flex:100%;
+  max-width:100%;
+  padding:10px;
+  display: block;
+}
+
+.columnM{
+	flex:100%;
+  max-width:100%;
+  padding:10px;
+	display: none;
+}
+
+.row img{
+  width:100%;
+  margin-top:10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.row img:hover{
+  transform:scale(1.20, 1.20);
+  cursor: pointer;
+}
+
+.rowH img{
+  width:100%;
+  margin-top:10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.rowH img:hover{
+  transform:scale(1.20, 1.20);
+  cursor: pointer;
+}
+
+
+/*imagen de ejemplo*/
+
+.image-container {
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.image-container img{
+  width: 100%;
+  height: auto;
+}
+
+
+/*variaciones del logotipo*/
+
+
+.container {
+    max-width: 60%;
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: flex; /* Utilizar flexbox para alinear elementos */
+    align-items: center;
+    position: relative; /* Establecer posición relativa para el contenedor */
+}
+
+.content {
+		border: 1px solid;
+    flex: 2; /* El contenido ocupa el espacio restante */
+    padding: 40px; /* Espaciado interior para el contenido */
+		border-color: grey;    
+		border-radius: 30px;
+
+    margin-top: 7%;
+    max-width: 60%;
+}
+
+.content h1 {
+    margin-bottom: 3%;
+    padding:10px 60px;
+}
+
+.container p {
+	  text-align: left;
+    font-size: 1.2rem;
+    color: white;
+    max-width: 80%;
+    line-height: 1.4;
+    padding:  20px 60px;
+}
+
+.overlay-image {
+		margin-top: 10%;
+    position: absolute; /* Establecer posición absoluta para la imagen */
+    top: 0; /* Alinear la imagen en la parte superior del contenedor */
+    right: 0; /* Alinear la imagen a la derecha del contenedor */
+    max-width: 60%; /* Ancho máximo para la imagen */
+    height: auto; /* Mantener la relación de aspecto original */
+}
+
+.overlay-image img{
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+
+
+
+/* Estilos CSS para el footer */
+footer {
+    background-color: #191919;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+/* Estilo para el eslogan */
+.slogan {
+    font-size: 1.5rem;
+    font-family: 'Subtitulo';
+    margin-bottom: 10px;
+}
+
+
+.botonFooter{
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 30px;
+    border: 1px solid #C850C0;
+    background: linear-gradient(45deg, #C850C0, #5B79D0);
+    font-size: 1rem;
+    padding: 10px 5px;
+    font-family: 'Cuerpo';
+    margin: 1%;
+    transition: background-color 0.3s ease; 
+}
+
+.botonFooter:hover {
+  color: black;
+} 
+
+/* Estilo para la imagen del logotipo */
+.logoFooter {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: auto;
+        margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+footer p{
+  font-size: 1.2rem;
+  margin: 1%;
+  font-family: 'Cuerpo';
+}
+
+footer i{
+  margin-right: 2%;
+}
+
+.divider {
+    border-top: 1px solid #fff;
+    margin: 20px auto; /* Margen superior e inferior para centrar la línea */
+    width: 50%; /* Ancho de la línea */
+}
+
+
+
+
+@media (max-width:1620px){
+  .container img{
+    margin-top: 20%;
+  }
+
+  .image-container img{
+    max-width: 80%;
+  }
+  }
+
+@media (max-width: 1530px){
+
+   .imgPortada{
+    margin-top: 8%;
+  }
+}
+@media (max-width:1420px){
+
+.container{
+	max-width: 80%;
+	margin-bottom: 20%;
+}
+.content p{
+	font-size: 1rem;
+}
+
+ .image-container img{
+    max-width: 70%;
+  }
+
+}
+@media (max-width: 1400px){
+  .tituloSection{
+    font-size: 3rem;
+  }
+   .image-container img{
+    max-width: 65%;
+  }
+
+   .imgPortada{
+    margin-top: 7%;
+  }
+}
+@media (max-width: 1220px){
+
+	#menu{
+		margin: 20px;
+	}
+
+	.tituloSection{
+    text-align: center;
+    margin: 0px 22px;
+    font-family: 'Titulo';
+    font-size: 2.5rem;
+	}
+
+	.column{
+    flex:50%;
+    max-width:50%;
+  }
+
+	.container{
+   max-width: 70%;	
+   margin-bottom: 5%;
+}
+
+.content h1{
+	font-size: 2rem;
+}
+
+.content p{
+	font-size: 1rem;	
+	max-width: 80%;
+
+}
+
+.content img{
+	max-width: 100%;
+}
+
+.subtituloLogo{
+	font-size: 2rem
+}
+
+  #menu{
+    margin: 20px;
+  }
+
+  .tituloSection{
+  text-align: center;
+  font-family: 'Titulo';
+  font-size: 2.3rem;
+  margin-top: 5%;
+  }
+
+ .image-container img{
+    max-width: 60%;
+  }
+
+   .imgPortada{
+    margin-top: 10%;
+  }
+
+}
+
+@media (max-width: 1100px){
+
+.tituloSection{
+  font-size: 1.9rem;
+}
+
+#videoContainer video{
+  display: none;
+}
+
+#videoContainer button{
+  display: block;
+  max-width: 70%;
+}
+
+ .image-container img{
+    max-width: 50%;
+  }
+
+  .imgPortada{
+    margin-top: 10%;
+  }
+
+}
+
+@media (max-width: 980px){
+
+
+
+  .container {
+        flex-direction: column; /* Cambia a una disposición de columna */
+        text-align: center; /* Centra el contenido en pantallas pequeñas */
+    }
+
+  .content {
+        max-width: 100%; /* El contenido ocupa el 100% del ancho en pantallas pequeñas */
+  }
+
+  .container img{
+   max-width: 100%;
+   margin-top: 10%;
+   position: relative;
+}
+
+.subtituloLogo{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.subtituloLogo{
+	font-size: 2rem;
+}
+
+.content p{
+	margin: 0 auto;
+	padding: 0px;
+}
+
+ .image-container img{
+    max-width: 50%;
+  }
+   .imgPortada{
+    margin-top: 15%;
+  }
+
+}
+
+
+@media (max-width: 955px){
+  .logo1{
+    width: 60%;
+  }
+
+}
+
+
+@media (max-width: 950px){
+ header{
+
+  flex-direction: row; /* Cambia a dirección de fila para alinear horizontalmente */
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between; /* Espacio entre el logotipo y la barra de navegación */
+  height: auto; 
+  
+  }
+
+.clearfix{
+  margin-top: 25px;
+}
+
+#menu{
+    
+    width: 40px;
+    display: block;
+    margin: 10px;
+    float: right; /*Para que se ponga el menu hamburguesa a la derecha*/
+    text-align: center;
+    font-size: 30px;
+    color: #5B79D0;
+    cursor: pointer;
+  }
+
+  #menu:before{ /*Para que no se active el responsive tablet*/
+    
+    content: '\f0c9';/*Pegamos lo de FontAwesome*/
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
+
+  .logo{
+  width: 40%;
+  display: block;
+  }
+
+  .logo1{
+    display: none;
+  }
+
+  nav{
+
+    display: none; /*Escondemos el menu de pantalla*/
+  }
+
+  nav.active{
+
+    display: block; /*Para que se agrupen todas las listas que hay debajo de esa classe*/
+    width: 100%;
+  }
+
+  nav.active ul{
+
+    display: block; /*Vuelves a decirle que se ponga en bloque la ul*/
+  }
+
+  nav ul li a{
+   padding: 25px;
+  }
+
+  nav.active ul a{
+    margin: 0;
+
+  }
+
+  .tituloSection{ 
+    text-align: center;
+    margin-top: 5%;
+    font-size: 2.3rem;
+  }
+
+	.column{
+    flex:50%;
+    max-width:50%;
+  }
+
+ .content{
+ 	padding: 20px;
+ }
+
+
+.image-container{
+/*    flex-direction: column;*/
+    height: auto;
+    max-width: 70%;
+}
+
+.image-container img{
+  max-width: 50%;
+  margin-bottom: 10%;
+}
+
+.subtituloLogo{
+	font-size: 1.8rem;
+  margin: 0px 99px;
+
+}
+
+.container p {
+	padding: 10px;
+}
+
+
+  .imgPortada{
+    margin-top: 12%;
+  }
+
+  .imgPortada img {
+    max-width: 100%; /* Asegura que la imagen no supere el ancho del contenedor */
+    max-height: 300%; /* Ajusta la altura de la imagen al 200% del contenedor */
+    width: 100%; /* Establece el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Permite que la altura se ajuste proporcionalmente al ancho */
+    object-fit: contain; /* Ajusta la imagen para que mantenga su relación de aspecto */
+  }
+
+  
+.footer-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.divider {
+  width: 80%;
+}
+
+
+}
+
+@media (max-width: 870px){
+  .logo1{
+    width:60%;
+  }
+
+   .image-container img{
+    max-width: 40%;
+  }
+
+}
+
+
+@media (max-width: 850px){
+  .logo1{
+    width: 100%;
+  }
+
+  .imgPortada{
+    margin-top: 14%;
+  }
+}
+
+@media (max-width: 838px){
+  .logo1{
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px){
+  .logo1{
+    width: 90%;
+  }
+}
+
+@media (max-width: 780px){
+  .logo1{
+    width: 100%;
+  }
+
+  nav ul li a{
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (max-width: 620px){
+
+	.column{
+    flex:100%;
+    max-width:100%;
+  }
+
+  .columnH{
+    flex:100%;
+    max-width:100%;
+    display: none;
+  }
+
+  .columnM{
+    flex:100%;
+    max-width:100%;
+    display: block;
+  }
+  .content p{
+  	padding: 2px;
+  	margin: 0;
+  	margin-top: 20px;
+  }
+
+  .container{
+  	max-width: 90%;
+  	margin-bottom: 15%;
+  }
+
+  .content h1{
+  	font-size: 1.5rem;
+  	margin: 0 auto;
+  	padding: 0px;
+  }
+
+  .subtituloLogo{
+  	font-size: 2rem;
+  }
+
+ .tituloSection{
+    font-size: 2rem;
+  }
+.image-container{
+    flex-direction: column;
+    height: auto;
+    max-width: 70%;
+}
+
+.image-container img{
+    flex-direction: column;
+    height: auto;
+    max-width: 80%;
+}
+
+   .imgPortada{
+    margin-top: 20%;
+  }
+
+}
+
+@media (max-width: 500px){
+
+  .tituloSection{
+    font-size: 2rem;
+    margin-top: 8%;
+    margin-bottom: 15%;
+  }
+
+   .imgPortada{
+    margin-top: 25%;
+  }
+.logoFooter{
+      margin: 5% auto;
+  }
+
+  footer p{
+  font-size: 0.8rem;
+  margin-top: 6%;
+  font-family: 'Cuerpo';
+}
+
+.slogan {
+    font-size: 1.3rem;
+}
+ } 
+
+@media (max-width: 430px){
+
+	.tituloSection{
+		font-size: 2rem;
+	}
+	
+  .logo {
+    width: 80px; /* Ajusta el ancho del logo automáticamente */
+    height: 40px; /* Altura fija del logo */
+    padding: 0 5px;
+  }
+
+  header {
+    flex-direction: row; /* Restablece la dirección de flexión a fila */
+    justify-content: space-between; /* Alinea los elementos en ambos extremos */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+
+  #menu {
+    width: auto; /* Ajusta el ancho del menú hamburguesa automáticamente */
+    margin: 0; /* Elimina el margen del menú hamburguesa */
+  }
+
+  .content p{
+  	padding: 2px;
+  	margin: 0;
+  	font-size: 0.8rem;
+  	margin-top: 20px;
+  }
+
+  .container{
+  	max-width: 70%;
+  }
+
+  .content h1{
+  	font-size: 1.5rem;
+  	margin: 0 auto;
+  	padding: 0px;
+  }
+
+  .subtituloLogo{
+  	font-size: 2rem;
+  }
+
+  .row{
+  	max-width: 100%;
+  }
+
+  .subtituloLogo {
+    font-size: 1.8rem;
+    margin: 0px 21px;
+}
+
+.imgPortada{
+  margin-top: 21%;
+}
+
+
+}
+
+
+@media (max-width: 350px){
+
+  .logoFooter{
+      margin: 5% auto;
+  }
+
+  footer p{
+  font-size: 0.8rem;
+  margin-top: 6%;
+  font-family: 'Cuerpo';
+}
+
+}
+
+@media (max-width: 300px){
+
+	 .subtituloLogo{
+  	font-size: 1.5rem;
+  	margin: 0px;
+  }
+
+    .row{
+  	max-width: 50%;
+  }
+
+   .tituloSection{
+    font-size: 1.3rem;
+    margin-top: 5%;
+  }
+
+    .imgPortada{
+    margin-top: 32%;
+  }
+
+}

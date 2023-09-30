@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="eS">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="stylesheet" type="text/CSS" href="CSS/estilosContacto.css">
+
+ 	<script defer src="JS/appContacto.js"></script>
+
+    <link rel="icon" href="IMG/favicon.png" type="image/png">
+
+  	<!--Link Fons Awesome-->
+  	<link rel="stylesheet" type="text/css" href="FontAwesome/CSS/FontAwesome.css">
+
+            <!-- LINK ANIMACIONES -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<title>CONTACTO</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1CR1S7RF6Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1CR1S7RF6Q');
+</script>
+
+
+</head>
+<body>
+
+    
+<header>
+
+    <a href="index.html" ><img class="logo" src="IMG/logo.png" alt=""></a>
+    <div id="menu"></div>
+
+    <nav>
+            <ul>
+
+            <a href="index.html" ><img class="logo1" src="IMG/logo.png" alt=""></a>
+
+            <li><a href="index.html" >INICIO</a></li>
+            <li><a href="portfolio.html">PROYECTOS</a></li>
+            <li><a href="personal.html">PERSONAL<MI></MI></a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="#"class="active">CONTACTO</a></li>
+            </ul>
+
+    </nav>
+
+
+
+        <div class="clearfix"></div>
+    </header>
+
+<!-- INFORMACION DE CONTACTO -->
+
+    <div class="contacto" data-aos="fade-down" data-aos-duration="500">
+        <h1>C O N T Á C T O</h1>
+    </div>
+
+
+<section class="infoTexto">   
+
+    <div class="column-left" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+            <P><i class="fa-solid fa-phone" style="color: #ffffff;"></i>(+34) 659 954 581</P>
+        </div>
+
+        <div class="column-right" data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
+            <p><i class="fa-regular fa-envelope" style="color: #ffffff;"></i>andperez.art@gmail.com</p>
+        </div>
+
+    </section>  
+
+
+
+<!-- AQUI EMPIEZA EL FORMULAIO -->
+
+
+<div class="fondo" ></div>
+
+<form class="form" action="https://formsubmit.co/andperez.art@gmail.com" method="POST" data-aos="zoom-in" id="miFormulario">
+
+    <p>Nombre:</p>
+    <input style="width: 100%; padding: 10px; margin-top: 2%; font-family:'Cuerpo'; background-color:black; color:white; font-size: 1rem;" id="nombre" name="nombre" placeholder="Nombre Completo" required>
+
+    <p>Correo:</p>
+    <input style="width: 100%; padding: 10px; margin-top: 2%; font-family:'Cuerpo'; background-color:black; color:white; font-size: 1rem;" id="correo" name="email" placeholder="Correo Electónico" required>
+
+    <p>Mensaje:</p>
+    <textarea class="mensaje" name="subject" rows="8" style="width: 100%; padding: 10px; margin-top: 2%; font-family:'Cuerpo'; background-color:black; color:white; font-size: 1rem;" placeholder="¿Qué te gustaría contarnos...?" required></textarea>
+
+    <div id="errorCorreo" style="color: red; display: none;">Por favor, ingresa un correo válido.</div>
+
+    <button type="submit">Enviar Mensaje</button>
+
+    <input type="hidden" name="_next" value="http://artandrea.c1.biz/Gracias.html">
+    <input type="hidden" name="_captcha" value="false">
+
+</form>
+
+
+<!-- <div id="mensaje-error"></div> -->
+<!-- <div id="mensaje-confirmacion" style="display: none; color: white;">
+ <span class="cerrar" id="cerrar-mensaje">&times;</span>
+<p>¡Gracias por tu mensaje! El formulario se ha enviado con éxito.</p>
+
+</div> -->
+
+
+<!-- AQUI EMPIEZA EL FOOTER -->
+
+    <footer data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
+        <p class="slogan"> ¿ A qué esperas ?</p>
+        <a href="Contacto.html"><button class="botonFooter"> ¡Contáctame! </button></a>
+        
+        <p><i class="fa-brands fa-instagram" style="color: #ffffff;"></i>Design.drea</p>
+        <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i>Teléfono: (+34) 659 954 581</p>
+        <p><i class="fa-regular fa-envelope" style="color: #ffffff;"></i>Correo electrónico: andperez.art@gmail.com</p>
+        
+       <img src="IMG/logo.png" alt="Logotipo" class="logoFooter">
+
+         <div class="divider"></div>
+    <p class="copyright">&copy; 2023 Andrea Pérez. Todos los derechos reservados.</p>
+    </footer>
+
+
+
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

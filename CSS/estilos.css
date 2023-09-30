@@ -1,0 +1,1584 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/*Variables*/
+
+
+
+.tituloSection{
+  font-size: 3rem;
+  text-align: center;
+  margin: 30px 0px;
+  margin-bottom: 4%;
+  color: WHITE;
+  font-family: 'Titulo';
+
+}
+
+
+.texto{
+  font-family: 'Cuerpo';
+  margin: 20px 0 0 0;
+  padding: 0;
+  font-weight: 400;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 24px;
+  position: relative;
+  line-height: 1.2;
+}
+
+
+
+.subtitulo{
+  color: white;
+  text-align: center;
+  font-size: 2.2rem;
+  background-color: black;
+  font-family: 'Subtitulo';
+  
+}
+
+.subtituloTexto{
+  color: #5B79D0 ; 
+  font-size: 1.2rem;
+  background-color: black;
+  font-family: 'Subtitulo';
+}
+
+
+
+@font-face {
+  font-family: 'Titulo'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Romance.ttf');
+}
+
+@font-face {
+  font-family: 'Subtitulo'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Cuerpo'; /* Nombre de la fuente que usarás para titulos */
+  src: url('../Fonts/Montserrat-Light.ttf');
+}
+
+body{
+	font-family: lato, Arial, sans-serif;
+	background-color: black;
+  overflow-x: hidden;
+}
+
+
+header{
+    margin-top: 0px;
+    position: fixed;
+    /* max-width: 2281px; */
+    height: auto;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    /* margin: 0px auto; */
+    padding-top: 30px;
+    top: 0;
+    /* left: 17%; */
+    border-radius: 4px;
+    font-size: 1.3rem;
+    margin-bottom: 7%;
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    z-index: 99;
+
+}
+
+
+.clearfix {
+  width: 100%;
+  height: 1px;
+  background-color: #C850C0; /* Color verde neón */
+  opacity: 0.4;
+  position: relative;
+  clear: both;
+  margin-top: 3px;
+}
+
+
+.clearfix::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* Desplazamiento hacia arriba para el efecto neón */
+  left: -5px; /* Desplazamiento hacia la izquierda para el efecto neón */
+  right: -5px; /* Desplazamiento hacia la derecha para el efecto neón */
+  bottom: -5px; /* Desplazamiento hacia abajo para el efecto neón */
+  background-color: #C850C0; /* Color verde neón */
+  opacity: 0.9; /* Opacidad del efecto neón */
+  filter: blur(6px); /* Desenfoque para el efecto neón */
+  z-index: -1; /* Coloca el efecto neón detrás de la línea */
+  border-radius: 20px;
+}
+
+
+.logo{
+  width: 40%;
+  height: auto;
+  padding: 0 25px;
+  display: none;
+}
+
+.logo1{
+  width: 40%;
+  height: auto;
+  padding: 0 25px;
+  display: block;
+}
+
+nav{
+
+  margin:0 auto;
+  margin-bottom: 2%;
+}
+
+nav ul{
+
+  display: flex;
+  right: 0pxx;
+}
+
+nav ul li{
+  list-style: none;
+}
+
+nav ul li a{
+
+  display: block;
+  margin: 10px 0px;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Cuerpo';
+  font-size: 1rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active{  /*Ponemos asi el .activa con la "," arriba en el hover por que va junto, la class activa la llamaremos en el JavaScript*/
+
+  color: white;
+  transition: 0.2s;
+  border-radius: 30px;
+  border: 1px solid #C850C0;
+  background: linear-gradient(45deg, #C850C0, #5B79D0);
+
+}
+
+
+}
+
+
+/*AQUI ACABA EL MENU*/
+
+
+
+.banner {
+    background-color: black; 
+    padding: 20px;
+    margin-top: 15%;
+}
+
+
+.banner-content {
+    max-width:1600px;
+    display: flex;
+    flex-direction: row; 
+/*    justify-content: space-between; */
+    align-items: center; 
+    max-width: 15 00px; 
+    margin: 0 auto; 
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.text {
+  flex-basis: 50%; 
+  padding: 20px;
+  position: relative;
+  font-size: 1.5rem;
+  background-image: linear-gradient(45deg,#FFCC70,  #C850C0, #5B79D0) ; /* Define el degradado */
+  -webkit-background-clip: text; /* Para navegadores  webkit */
+  background-clip: text;
+  color: transparent; /* Hacemos el texto transparente */
+  font-family: 'Subtitulo';
+}
+
+.text h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: 'Cuerpo';
+    color: white;
+}
+
+.text h2{
+    font-size: 6rem;
+    margin-bottom: 5%;
+    font-family: 'Titulo';
+    letter-spacing: 3px;
+}
+
+.linea-debajo {
+  border-bottom: 2px solid #C850C0; /* Define el estilo de la línea, como color, grosor y tipo */
+}
+
+.text p{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'textoBanner';
+    color: white;
+    font-family: 'Cuerpo';
+}
+
+.text a{
+  text-decoration: none;
+  color: white;
+}
+
+.botonBanner{
+  width: auto;
+  height: auto;
+  color: white;
+  border-radius: 30px;
+  border: 1px solid #C850C0;
+  background: linear-gradient(45deg, #C850C0, #5B79D0);
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  margin-top:5%;
+  font-family: 'Cuerpo';
+  margin-bottom: 10%;
+}
+
+.botonBanner:hover{
+  color: black;
+}
+
+.text a:hover{
+  color: black;
+}
+
+
+.texto a:hover{
+  color: black;
+}
+
+button i{
+
+font-size: 1.7rem;
+padding: 0px 10px;
+}
+
+
+
+.image {
+    flex-basis: 40%; 
+
+}
+
+.image img {
+    max-width: 120%; 
+    height: auto; 
+    background-size: cover;
+}
+
+
+/*CONTENEDOR INFORMACION*/
+
+
+.contenedor {
+    position: relative;
+    display: flex;
+    width: 70%;
+    height: 80%; 
+    margin: 0 auto;
+    margin-bottom: 10%;
+    margin-top: 7%;
+}
+
+
+.imagen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45%; 
+    height: auto; 
+    border-radius: 20px;
+    margin-top: 7%;
+    overflow: hidden;
+}
+
+.imagen img{
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+  border-radius: 20px;
+   object-fit: cover; 
+}
+
+.texto {
+    border-radius: 20px;
+    background-color: #191919; 
+    color: white; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    height: 600px; 
+    width: 60%; 
+    right: 0; 
+    left: auto; 
+    margin-left: 40%;
+}
+
+.texto h1{
+  margin-left: 23%;
+  margin-top: 10%;
+  font-family: 'titulo';
+  margin-bottom: 5%;
+  flex-basis: 50%; 
+  font-size: 4rem;
+  background-image: linear-gradient(45deg,#FFCC70,  #C850C0, #5B79D0) ; /* Define el degradado */
+  -webkit-background-clip: text; /* Para navegadores  webkit */
+  background-clip: text;
+  color: transparent; /* Hacemos el texto transparente */
+}
+
+.texto p{
+  margin-left: 23%;
+  margin-right: 10%;
+  line-height: 1.5; 
+  font-family: 'Cuerpo';
+}
+
+.texto button{
+  margin-left: 23%;
+  margin-top: 7%;
+  border-radius: 20px;
+  border: 1px solid #C850C0;
+  background: linear-gradient(45deg, #C850C0, #5B79D0);
+  font-size: 1.3rem;
+  padding: 10px 30px;
+  color: white;
+  font-family: 'Cuerpo';
+
+}
+
+.texto a{
+  text-decoration: none;
+  color: white;
+  z-index: 99;
+
+}
+
+
+
+/* Estilos del carrusel */
+.carousel-container {
+    width: 70%; /* Ancho del contenedor principal del 70% */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+
+    display: flex;
+    width: auto; /* Ancho del carrusel del 100% */
+    transition: transform 0.7s;
+
+}
+
+.slide {
+    margin: 0 10px;
+    flex: 0 0 calc(33.33% - 20px); /* Ancho de cada diapositiva en porcentaje, con margen */
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d; /* Preserva la perspectiva 3D para las imágenes */
+    transition: flex 0.5s; /* Aplica una transición suave al tamaño de las diapositivas */
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos de las flechas */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para la sección de dos columnas con texto*/
+
+.infoTexto {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  width: 70%;
+  margin: 10% auto 0;
+}
+
+/* Estilos para la columna izquierda */
+.column-left {
+  flex: 1;  
+  max-width: 50%;
+  padding: 20px; 
+  display: flex; /* Convertir la columna en un contenedor flex */
+  flex-direction: column; /* Alinear el contenido verticalmente */
+  justify-content: center; /* Centrar el contenido verticalmente */
+  align-items: left;
+ 
+}
+
+.column-left h1 {
+  margin: 0; /* Elimina el margen predeterminado del título */
+  text-align: left; /* Alinea el título a la izquierda */
+  font-family: 'titulo';
+  font-size: 3.5rem;
+  color: transparent;
+  background-image: linear-gradient(45deg,#FFCC70,  #C850C0, #5B79D0) ; /* Define el degradado */
+  -webkit-background-clip: text; /* Para navegadores  webkit */
+  background-clip: text;
+}
+/* Estilos para la columna derecha */
+
+.column-right {
+  flex: 1; 
+  max-width: 50%; 
+  padding: 20px; 
+
+}
+
+.column-right P{
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-family: 'Cuerpo';
+  color: white;
+}
+
+
+/* Estilos CSS para el footer */
+footer {
+    background-color: #191919;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 15%;
+}
+
+/* Estilo para el eslogan */
+.slogan {
+    font-size: 1.5rem;
+    font-family: 'Subtitulo';
+    margin-bottom: 10px;
+}
+
+
+.botonFooter{
+    width: auto;
+    height: auto;
+    color: white;
+    border-radius: 30px;
+    border: 1px solid #C850C0;
+    background: linear-gradient(45deg, #C850C0, #5B79D0);
+    font-size: 1rem;
+    padding: 10px 5px;
+    font-family: 'Cuerpo';
+    margin: 1%;
+    transition: background-color 0.3s ease; 
+}
+
+.botonFooter:hover {
+  color: black;
+} 
+
+/* Estilo para la imagen del logotipo */
+.logoFooter{
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+footer p{
+  font-size: 1.2rem;
+  margin: 1%;
+  font-family: 'Cuerpo';
+}
+
+footer i{
+  margin-right: 2%;
+}
+
+.divider {
+    border-top: 1px solid #fff;
+    margin: 20px auto; /* Margen superior e inferior para centrar la línea */
+    width: 50%; /* Ancho de la línea */
+}
+
+.container {
+  width: 80%; /* Establece un ancho máximo para el contenedor */
+  max-width: 1000px; /* Establece un ancho máximo absoluto */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.carousel-container-logos {
+    max-width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.carouselLogos{
+  width: 200%;
+  display: flex;
+  animation: carouselAnimation 10s linear infinite;
+}
+
+
+
+
+@keyframes carouselAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.carouselLogos img{
+  max-width: 2%;
+  height: auto;
+  margin: 0px 30px;
+}
+
+/*Responsive*/
+
+@media (max-width:1580px){
+.banner{
+    margin-top: 14%;
+}
+
+.banner h1{
+    font-size: 2.5rem;
+}
+}
+
+
+@media (max-width:1480px){
+
+.imagen {
+margin-top: 10%;
+ }
+
+.texto p{
+  font-size: 1.1rem;
+}
+
+.banner{
+    margin-top: 16%;
+}
+
+.banner h1{
+    font-size: 2.4rem;
+}
+}
+
+
+@media (max-width:1320px){
+
+.imagen {
+margin-top: 10%;
+ }
+
+.texto p{
+  font-size: 1.1rem;
+}
+
+.banner{
+    margin-top: 18%;
+}
+
+.banner h1{
+    font-size: 2.3rem;
+}
+
+}
+
+
+@media (max-width: 1270px){
+
+.banner{
+    margin-top: 20%;
+}
+
+.banner h1{
+    font-size: 1.8rem;
+}
+  #menu{
+    margin: 20px;
+  }
+
+
+  .imagen {
+    margin-top: 10%;
+    overflow: hidden;
+}
+
+.imagen img{
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+  border-radius: 20px;
+   object-fit: cover; 
+}
+
+
+.texto h1{
+  margin-top: 2%;
+  font-size: 3rem   ;
+}
+
+.texto p{
+  font-size: 1.1rem;
+  line-height: 1.5; 
+  margin-left: 11%;
+
+}
+
+.texto button{
+  font-size: 1.2rem;
+}
+
+.column-left h1{
+  font-size: 2.5rem;
+}
+
+.column-right p{
+  font-size: 1rem;
+}
+
+.carouselLogos img{
+  max-width: 4%;
+  height: auto;
+  margin: 0px 30px;
+}
+
+}
+
+
+@media (max-width: 1230px){
+
+.column-left h1{
+  font-size: 1.5rem;
+}
+
+.column-right p{
+  font-size: 1rem;
+}
+
+.banner{
+    margin-top: 21%;
+}
+
+.banner h1{
+    font-size: 2rem;
+
+}
+.clearfix{
+    margin-top: 2%;
+  }
+
+
+.text h2{
+    font-size: 5rem;
+    margin-bottom: 5%;
+}
+
+.linea-debajo {
+  border-bottom: 2px solid #C850C0; /* Define el estilo de la línea, como color, grosor y tipo */
+}
+
+.text p{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.botonBanner{
+  font-size: 1.8rem;
+}
+
+
+button i{
+
+font-size: 1.6rem;
+padding: 0px 10px;
+}
+
+.imagen img{
+  margin-top: 30% ;
+}
+
+ 
+ header {
+    flex-direction: row; /* Cambia la dirección de flexión a fila */
+    justify-content: space-between; /* Alinea los elementos en ambos extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+
+  .logo {
+    width: 50%; /* Ajusta el ancho del logotipo automáticamente */
+    height: auto; /* Ajusta la altura del logotipo automáticamente */
+  }
+
+  nav {
+    float: right; /* Alinea el menú a la derecha */
+    margin-bottom: 0; /* Elimina el margen inferior del menú */
+  }
+
+  nav ul {
+    display: flex;
+    right: auto; /* Ajusta la posición a la derecha automáticamente */
+  }
+
+}
+
+
+@media (max-width: 1200px){
+  .clearfix{
+    margin-top: 2%;
+  }
+
+    header {
+    flex-direction: row; /* Cambia la dirección de flexión a fila */
+    justify-content: space-between; /* Alinea los elementos en ambos extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+
+  .logo {
+    width: 50%; /* Ajusta el ancho del logotipo automáticamente */
+    height: auto; /* Ajusta la altura del logotipo automáticamente */
+  }
+
+  nav {
+    float: right; /* Alinea el menú a la derecha */
+    margin-bottom: 0; /* Elimina el margen inferior del menú */
+  }
+
+  nav ul {
+    display: flex;
+    right: auto; /* Ajusta la posición a la derecha automáticamente */
+  }
+
+  .carouselLogos img{
+  height: auto;
+  margin: 0px 30px;
+}
+
+
+}
+
+
+@media (max-width: 1100px){
+
+.column-left h1{
+  font-size: 2.5rem;
+}
+
+.column-right p{
+  font-size: 1.2rem;
+}
+
+.text h1{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.text h2{
+    font-size: 4.3rem;
+    margin-bottom: 5%;
+}
+
+.linea-debajo {
+  border-bottom: 2px solid #C850C0; /* Define el estilo de la línea, como color, grosor y tipo */
+}
+
+.text p{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.botonBanner{
+  font-size: 1.5rem;
+}
+
+.banner{
+    margin-top: 25%;
+}
+
+.banner h1{
+    font-size: 1.8rem;
+}
+
+button i{
+
+font-size: 1.4rem;
+padding: 0px 10px;
+}
+
+ header {
+    flex-direction: row; /* Cambia la dirección de flexión a fila */
+    justify-content: space-between; /* Alinea los elementos en ambos extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+
+
+  .logo {
+    width: 50%; /* Ajusta el ancho del logotipo automáticamente */
+    height: auto; /* Ajusta la altura del logotipo automáticamente */
+  }
+
+  nav {
+    float: right; /* Alinea el menú a la derecha */
+    margin-bottom: 0; /* Elimina el margen inferior del menú */
+  }
+
+  nav ul {
+    display: flex;
+    right: auto; /* Ajusta la posición a la derecha automáticamente */
+  }
+
+  .carouselLogos img{
+  max-width: 3%;
+  height: auto;
+  margin: 25px 30px;
+}
+}
+
+
+@media (max-width:968px){
+
+   header{
+
+  flex-direction: row; /* Cambia a dirección de fila para alinear horizontalmente */
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between; /* Espacio entre el logotipo y la barra de navegación */
+  height: auto; 
+  
+  }
+
+.clearfix{
+  margin-top: 25px;
+}
+
+#menu{
+    
+    width: 40px;
+    display: block;
+    margin: 10px;
+    float: right; /*Para que se ponga el menu hamburguesa a la derecha*/
+    text-align: center;
+    font-size: 30px;
+    color: #5B79D0;
+    cursor: pointer;
+  }
+
+  #menu::before{ /*Para que no se active el responsive tablet*/
+    
+    content: '\f0c9';/*Pegamos lo de FontAwesome*/
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
+
+  
+
+  nav{
+
+    display: none; /*Escondemos el menu de pantalla*/
+  }
+
+  nav.active{
+
+    display: block; /*Para que se agrupen todas las listas que hay debajo de esa classe*/
+    width: 100%;
+
+  }
+
+  nav.active ul{
+    display: block; /*Vuelves a decirle que se ponga en bloque la ul*/
+  }
+
+  nav ul li a:hover, nav ul li a.active{
+   margin-top: 3%;
+  }
+ 
+
+  nav ul li a{
+   padding: 25px;
+  }
+
+  nav.active ul a{
+    margin: 0;
+
+  }
+ .logo{
+  width: 40%;
+  display: block;
+  }
+
+  .logo1{
+    display: none;
+  }
+  .banner-content {
+    flex-direction: column;
+  }
+
+  .text, .image {
+    flex-basis: 100%; 
+  }    
+
+  .banner-content {
+        flex-direction: column; /* Los elementos se apilan en dispositivos móviles */
+    }
+
+    .text, .image {
+        flex-basis: 100%; /* Ancho del 100% para ambos elementos en dispositivos móviles */
+    }
+
+    .text h1{
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+  .text h2{
+      font-size: 5.5rem;
+      margin-bottom: 4%;
+  }
+
+
+  .linea-debajo {
+    border-bottom: 2px solid #C850C0; /* Define el estilo de la línea, como color, grosor y tipo */
+  }
+
+  .text p{
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+  }
+
+  .botonBanner{
+    font-size: 1.3rem;
+  }
+
+  button i{
+
+  font-size: 1.4rem;
+  padding: 0px 10px;
+  }
+
+ .contenedor {
+ flex-direction: column; 
+ width: 80%; 
+ margin-top: 7%; 
+
+}
+
+.image img{
+    max-width:  100%;
+
+}
+
+
+.imagen {
+width: 100%; 
+margin-top: 70%;
+ }
+
+.texto {
+ width: 100%; 
+ margin-left: 0; 
+ padding: 10px; 
+ }
+
+.texto h1{
+ margin: 0 auto;
+ margin-top: 10px; 
+ text-align: center;
+ margin-bottom: 5%;
+ margin-top: 5%;
+}
+
+.texto p {
+ margin: 0 auto;
+ margin-top: 10px; 
+ text-align: center; 
+ }
+
+.texto button {
+    margin-left: 37%;
+    margin-top: 10%;
+
+}
+
+ .imagen img{
+  margin-top: 0px;
+}
+
+ .carousel-container {
+  margin-top: 20%;
+  width: 100%;
+  padding: 0 20px; /* Agrega un espacio alrededor del carrusel en pantallas más pequeñas */
+}
+
+.slide {
+  flex: 0 0 calc(50% - 20px); /* Cambia el ancho de las diapositivas para que sean 2 en una fila */
+}
+
+.slide img{
+  width: 80%;
+}
+
+ .column-left,
+  .column-right {
+    flex: 100%; /* Ocupan el 100% del ancho en pantallas pequeñas */
+    max-width: 100%; /* Ancho máximo en pantallas pequeñas */
+  }
+
+footer{
+  margin-top: 60%;
+}
+
+
+.footer-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.divider {
+  width: 80%;
+}
+
+.carouselLogos img{
+  max-width: 5%;
+  height: auto;
+  margin-left:30px;
+  margin-right:30px;
+  margin-top: 30%;
+
+}
+
+}
+
+@media (max-width: 950px){
+  .logo1{
+    width: 70%;
+  }
+
+  .tituloSection{
+    margin: 90px 30px;
+    margin-top: 35%;
+  }
+
+.column-left, .column-right{
+  width: 100%;
+}
+
+
+}
+
+@media (max-width: 850px){
+  .logo1{
+    width: 80%;
+  }
+
+  .banner h1{
+    font-size: 1.8rem;
+  }
+}
+
+
+@media (max-width: 800px){
+  .logo1{
+    width: 100%;
+  }
+}
+
+@media (max-width: 770px){
+.imagen img{
+margin-top: 10%;
+ }
+
+.texto p{
+ font-size: 1.2rem;
+ }
+
+.texto h1{
+ font-size: 3rem;
+}
+
+  .logo1{
+    width: 100%;
+  }
+
+    nav ul li a{
+    font-size: 0.9rem;
+  }
+
+
+.texto button {
+  margin-left: 35%;
+  font-size: 1rem;
+
+}
+
+.carousel-container-logos {
+  margin-top: 40%;
+  width: 120%;
+  padding: 0 20px; /* Agrega un espacio alrededor del carrusel en pantallas más pequeñas */
+}
+
+}
+
+
+@media (max-width: 744px){
+.imagen {
+margin-top: 100%;
+ }
+
+.imagen img{
+  margin-top: 12%;
+}
+
+ .carousel-container {
+  margin-top: 16%;
+  width: 100%;
+  padding: 0 20px; /* Agrega un espacio alrededor del carrusel en pantallas más pequeñas */
+}
+
+.slide {
+          display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; 
+  flex: 0 0 calc(100% - 20px); /* Cambia el ancho de las diapositivas para que sean 2 en una fila */
+}
+
+.slide img{
+  width: 80%;
+
+}
+
+.text h2{
+  font-size: 4rem;
+}
+
+}
+
+
+@media (max-width: 710px){
+  .imagen img{
+  margin-top: 7%;
+}
+
+}
+
+@media (max-width: 530px){
+.imagen {
+margin-top: 100%;
+ }
+
+.texto p{
+ font-size: 0.8rem;
+ }
+
+.column-left h1{
+  font-size: 2.5rem;
+}
+
+.column-right p{
+  font-size: 0.8rem;
+}
+
+.texto button {
+  margin-left: 30%;
+  font-size: 1rem;
+
+}
+
+
+
+}
+
+
+@media (max-width: 480px){
+
+.logo {
+    width: 80px; 
+    padding: 0 5px;
+  }
+
+  header {
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+  }
+
+  #menu {
+    width: auto; 
+    margin: 0; 
+  }
+
+  .text h1{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+
+}
+
+  .text h2{
+      font-size: 3.7rem;
+      margin-bottom: 5%;
+  }
+
+  .linea-debajo {
+    border-bottom: 2px solid #C850C0; /* Define el estilo de la línea, como color, grosor y tipo */
+  }
+
+  .text p{
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+      FONT-FAMILY: 'Cuerpo'
+  }
+
+  .botonBanner{
+    font-size: 0.9rem;
+    padding: 5px 7px;
+  }
+
+  button i{
+
+  font-size: 0.8rem;
+  padding: 0px 10px;
+  }
+
+.imagen {
+width: 100%; 
+margin-top: 150%;
+height: 40%;
+ }
+
+.texto {
+ width: 100%; 
+ margin-left: 0; 
+ padding: 10px; 
+ }
+
+.texto h1{
+ margin: 0 auto;
+ margin-top: 10px; 
+ text-align: center;
+ margin-bottom: 5%;
+ margin-top: 5%;
+ font-size: 3rem;
+}
+
+.texto p {
+ margin: 0 auto;
+ margin-top: 10px; 
+ text-align: center; 
+ font-size: 0.8rem;
+ }
+
+.texto button {
+  margin-left: 25%;
+  margin-top: 10%;
+  font-size: 0.8rem;
+
+}
+
+.carousel-container {
+  margin-top: 40%;
+}
+
+
+.carousel-container-logos {
+  margin-top: 60%;
+}
+
+
+}
+
+
+@media (max-width: 476px){
+
+.carousel-container-logos{
+  margin-top: 2%;
+}
+.imagen {
+    margin-top: 115%;
+ }
+
+.texto button{
+  margin-left: 30%;
+}
+
+.imagen img{
+  margin-top: 5% ;
+}
+
+
+.logoFooter{
+      margin: 5% auto;
+  }
+
+  footer p{
+  font-size: 0.8rem;
+  margin-top: 6%;
+  font-family: 'Cuerpo';
+}
+
+.slogan {
+    font-size: 1.3rem;
+}
+
+.carouselLogos img{
+  max-width:10%;
+  height: auto;
+  margin: 0px 30px;
+}
+
+
+.carouselLogos{
+  width: 200%;
+  display: flex;
+  margin-top: 30%;
+  animation: carouselAnimation 5s linear infinite;
+}
+
+}
+
+@media (max-width: 430px){
+.imagen {
+margin-top: 130%;
+ }
+
+.texto button{
+  margin-left: 30%;
+}
+
+.imagen img{
+  margin-top: 5% ;
+}
+
+.logoFooter{
+      margin: 5% auto;
+  }
+
+  footer p{
+  font-size: 0.8rem;
+  margin-top: 6%;
+  font-family: 'Cuerpo';
+}
+
+.slogan {
+    font-size: 1.3rem;
+}
+
+.carouselLogos img{
+  max-width:10%;
+  height: auto;
+  margin: 0px 30px;
+}
+.text h2 {
+    font-size: 3.1rem;
+    margin-bottom: 5%;
+}
+
+
+.carouselLogos{
+  width: 100%;
+    margin-top: 50%;
+  display: flex;
+  animation: carouselAnimation 5s linear infinite;
+}
+
+}
+
+@media (max-width: 360px){
+.imagen {
+margin-top: 160%;
+ }
+
+.texto button{
+  margin-left: 30%;
+}
+
+.imagen img{
+  margin-top: 5% ;
+}
+
+
+.logoFooter{
+      margin: 5% auto;
+  }
+
+  footer p{
+  font-size: 0.8rem;
+  margin-top: 6%;
+  font-family: 'Cuerpo';
+}
+
+.carouselLogos{
+  width: 200%;
+    margin-top: 100%;
+  display: flex;
+  animation: carouselAnimation 5s linear infinite;
+}
+
+}
+
+
+
+@media (max-width: 340px){
+
+.contenedor{
+  width: 70%;
+}
+.imagen {
+margin-top: 180%;
+ }
+
+.texto button{
+  margin-left: 20%;
+}
+
+.imagen img{
+  margin-top: 26% ;
+}
+
+.carouselLogos{
+  width: 200%;
+  margin-top: 80%;
+  display: flex;
+  animation: carouselAnimation 5s linear infinite;
+}
+
+.text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5%;
+}
+
+}
+
+@media (max-width:320px){
+
+.texto button{
+margin-left: 20%;
+}
+
+}
+
+@media (max-width: 308px){
+
+.banner-content{
+  margin-top: 40%;
+}
+
+.carouselLogos{
+  width: 200%;
+    margin-top: 120%;
+  display: flex;
+  animation: carouselAnimation 5s linear infinite;
+}
+
+.text h2 {
+    font-size: 2.3rem;
+    margin-bottom: 5%;
+}
+
+}
+
+@media (max-width: 290px){
+
+
+
+.contenedor{
+  width: 70%;
+}
+.imagen {
+margin-top: 300%;
+ }
+
+.texto button{
+  margin-left: 20%;
+  font-size: 0.6rem;
+}
+
+.imagen img{
+  margin-top: 20% ;
+}
+
+.carousel-container {
+  margin-top: 80%;
+}
+
+.banner-content{
+  margin-top: 40%;
+}
+
+.carouselLogos{
+  width: 130%;
+    margin-top: 50%;
+  display: flex;
+  animation: carouselAnimation 5s linear infinite;
+}
+
+.texto h1{
+  font-size: 2rem;
+}
+
+.column-left h1{
+  font-size: 2rem;
+}
+
+.text h2 {
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
+
+}
